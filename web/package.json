@@ -38,6 +38,6 @@
     ]
   }
   ,"scripts": {
-    "start": "node ./views/web.js"
+    "start": "node ./web.js"
 }
 }
