@@ -42,15 +42,12 @@ app.get("*", function (req, res) {
 
 const React = request("react");
 const ReactDOM = request("react-dom");
-const Loader = request("./layouts/loader/Loader");
+var Loader = request("./src/layouts/loader/Loader");
 const { HashRouter } = request("react-router-dom");
-const App = request("./App");
+const App = request("./src/App");
 
 ReactDOM.render(
-  React.lazy(Loader),
-  <HashRouter>
-    <App />
-  </HashRouter>,
+  React.lazy(Loader(HashRouter.HashRouter(App()))),
   document.getElementById("root")
 );
 
