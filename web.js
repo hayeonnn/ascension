@@ -39,11 +39,11 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/src/index.js"));
 });
 
-const Suspense = "react";
+const { Suspense } = request("react");
 const ReactDOM = request("react-dom");
-const Loader = "./layouts/loader/Loader";
-const HashRouter = "react-router-dom";
-const App = "./App";
+const Loader = request("./layouts/loader/Loader");
+const { HashRouter } = request("react-router-dom");
+const App = request("./App");
 
 ReactDOM.render(
   <Suspense fallback={<Loader />}>
