@@ -30,17 +30,16 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
-app.use(express.static(path.join(__dirname, "/src")));
+app.use(express.static(path.join(__dirname, "/build")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/index.js"));
+  res.sendFile(path.join(__dirname, "ascension/build/index.html"));
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/index.js"));
+  res.sendFile(path.join(__dirname, "ascension/build/index.html"));
 });
-
-const React = request("react");
+/**const React = request("react");
 const ReactDOM = request("react-dom");
 var Loader = request("./src/layouts/loader/Loader");
 const { HashRouter } = request("react-router-dom");
@@ -50,6 +49,7 @@ ReactDOM.render(
   React.lazy(Loader(HashRouter.HashRouter(App()))),
   document.getElementById("root")
 );
+ */
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
