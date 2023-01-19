@@ -1,13 +1,25 @@
-//import React, { Suspense } from "react";
-//import Loader from "./views/layouts/loader/Loader.js";
-//import { HashRouter } from "react-router-dom";
-//import App from "./views/App.js";
 import express from "express";
 import mysql from "mysql";
-//const express = require("express");
-const app = express();
-const PORT = 8001;
+import cors from "cors";
+import path from "path";
 
+const app = express();
+const port = process.env.PORT || 8002;
+app.use(express.static("uploads"));
+
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+});
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
+});
 // mysql 모듈 사용
 //const mysql = require("mysql");
 
@@ -44,7 +56,8 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index");
 });
-
+/*
 app.listen(PORT, () => {
   console.log(`server started on PORT ${PORT}`);
 });
+*/
