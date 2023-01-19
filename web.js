@@ -30,11 +30,11 @@ connection.connect();
 app.use(express.static("uploads"));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/views/index.ejs"));
+  res.sendFile(path.join(__dirname, "/src/index.ejs"));
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/views/index.ejs"));
+  res.sendFile(path.join(__dirname, "/src/index.ejs"));
 });
 
 app.listen(port, () => {
