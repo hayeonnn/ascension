@@ -30,11 +30,11 @@ connection.connect();
 app.use(express.static(path.join(__dirname, "/src")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/index.ejs"));
+  res.sendFile(path.join(__dirname, "/src/index.js"));
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/index.ejs"));
+  res.sendFile(path.join(__dirname, "/src/index.js"));
 });
 
 app.listen(port, () => {
