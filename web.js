@@ -30,7 +30,7 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
-app.use(express.static(path.join(__dirname, "ascension/build")));
+app.use(express.static(path.join(__dirname, "ascension0_test0709/build")));
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "./build/index.html"));
