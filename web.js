@@ -1,15 +1,6 @@
 const express = require('express')
 const app = express()
 const PORT = 8001
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs')
-app.get('/', (req, res) => {
-  res.render('index')
-})
-app.listen(PORT, () => {
-  console.log(`server started on PORT ${PORT}`)
-})
-// web.js
 
 // mysql 모듈 사용
 const mysql = require('mysql');
@@ -40,3 +31,12 @@ connection.query('describe books', (error, results, fields) => {
 
 // 연결 종료
 connection.end(); */
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs')
+app.get('/', (req, res) => {
+  res.render('index')
+})
+app.listen(PORT, () => {
+  console.log(`server started on PORT ${PORT}`)
+})
