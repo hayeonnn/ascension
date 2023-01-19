@@ -17,7 +17,7 @@ const port = process.env.PORT || 8002;
 
 // 연결할 DB 정보입력
 const connection = mysql.createConnection({
-  host: "ascension.cafe24app.com",
+  host: "test.cafe24app.com",
   user: "ascension0",
   password: "shy66300!",
   database: "ascension0",
