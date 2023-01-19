@@ -1,19 +1,7 @@
-/**
-import express from "express";
-import mysql from "mysql";
-import cors from "cors";
-import path from "path";
-import "./assets/scss/style.scss";
-import Loader from "./layouts/loader/Loader";
-import App from "./App";
- */
-
 const express = require("express");
-//const cors = require("cors");
 const path = require("path");
 const mysql = require("mysql");
 const { request } = require("http");
-//const { lazy } = require("react");
 
 const app = express();
 const port = process.env.PORT || 8002;
@@ -39,29 +27,10 @@ app.get("/", function (req, res) {
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/build/index.html"));
 });
-/**const React = request("react");
-const ReactDOM = request("react-dom");
-var Loader = request("./src/layouts/loader/Loader");
-const { HashRouter } = request("react-router-dom");
-const App = request("./src/App");
-
-ReactDOM.render(
-  React.lazy(Loader(HashRouter.HashRouter(App()))),
-  document.getElementById("root")
-);
- */
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
-/*
-
-      app.set("views", __dirname + "/src");
-      app.set("view engine", "ejs");
-      app.get("/", (req, res) => {
-        res.render("index");
-      });
-*/
 
 /**
 // create 쿼리문 사용
