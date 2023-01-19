@@ -13,6 +13,7 @@ const express = require("express");
 const path = require("path");
 const mysql = require("mysql");
 const { request } = require("http");
+//const { lazy } = require("react");
 
 const app = express();
 const port = process.env.PORT || 8002;
@@ -39,19 +40,17 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/src/index.js"));
 });
 
-const { Suspense } = request("react");
+const React = request("react");
 const ReactDOM = request("react-dom");
 const Loader = request("./layouts/loader/Loader");
 const { HashRouter } = request("react-router-dom");
 const App = request("./App");
 
 ReactDOM.render(
-  <Suspense fallback={<Loader />}>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </Suspense>,
-
+  React.lazy(Loader),
+  <HashRouter>
+    <App />
+  </HashRouter>,
   document.getElementById("root")
 );
 
