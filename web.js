@@ -1,3 +1,4 @@
+/**
 import express from "express";
 import mysql from "mysql";
 import cors from "cors";
@@ -5,6 +6,11 @@ import path from "path";
 import "./assets/scss/style.scss";
 import Loader from "./layouts/loader/Loader";
 import App from "./App";
+ */
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const mysql = require("mysql");
 
 const app = express();
 const port = process.env.PORT || 8002;
