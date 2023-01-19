@@ -27,14 +27,14 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
-app.use(express.static(path.join(__dirname, "/src")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/index.js"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/src/index.js"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 app.listen(port, () => {
