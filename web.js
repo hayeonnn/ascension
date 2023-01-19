@@ -27,7 +27,7 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
-app.use(express.static("uploads"));
+app.use(express.static(__dirname, "/src"));
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/src/index.ejs"));
