@@ -7,10 +7,12 @@ import "./assets/scss/style.scss";
 import Loader from "./layouts/loader/Loader";
 import App from "./App";
  */
+
 const express = require("express");
 //const cors = require("cors");
 const path = require("path");
 const mysql = require("mysql");
+const { request } = require("http");
 
 const app = express();
 const port = process.env.PORT || 8002;
@@ -27,15 +29,31 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/src")));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/public/index.html"));
+  res.sendFile(path.join(__dirname, "/src/index.js"));
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/public/index.html"));
+  res.sendFile(path.join(__dirname, "/src/index.js"));
 });
+
+const Suspense = "react";
+const ReactDOM = request("react-dom");
+const Loader = "./layouts/loader/Loader";
+const HashRouter = "react-router-dom";
+const App = "./App";
+
+ReactDOM.render(
+  <Suspense fallback={<Loader />}>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Suspense>,
+
+  document.getElementById("root")
+);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
