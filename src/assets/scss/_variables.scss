@@ -1,18 +1,18 @@
 /*******************/
 // Theme Fonts
 /********************/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
-$font-family-sans-serif: "Nunito", sans-serif;
+@import url("../font/font.css");
+$font-family-sans-serif: "Title_Light", sans-serif;
 /*******************/
 // Theme Colors
 /********************/
-$primary: #2962ff;
-$info: #3699ff;
+$primary: #2ea5f9;
+$info: #45d2fd;
 $danger: #f64e60;
 $success: #0bb7af;
 $warning: #ee9d01;
 $dark: #343a40;
-$light: #eaf2fb;
+$light: #ffffff;
 $secondary: #35363b;
 
 $theme-colors: (
@@ -24,7 +24,7 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "dark": $dark,
-  "light-primary": #d6e4f3,
+  "light-primary": #ffffff,
   "light-success": #d5f3f2,
   "light-info": #d3edfa,
   "light-warning": #f8ecdc,

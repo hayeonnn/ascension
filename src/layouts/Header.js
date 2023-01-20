@@ -13,8 +13,8 @@ import {
   Dropdown,
   Button,
 } from "reactstrap";
-import { ReactComponent as LogoWhite } from "../assets/images/logos/xtremelogowhite.svg";
-import user1 from "../assets/images/users/user1.jpg";
+import { ReactComponent as LogoWhite } from "../assets/images/logos/cross.svg";
+import user from "../assets/images/users/schale.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -60,43 +60,72 @@ const Header = () => {
         <Nav className="me-auto" navbar>
           <NavItem>
             <Link to="/starter" className="nav-link">
-              Starter
+              †昇天†
             </Link>
           </NavItem>
           <NavItem>
             <Link to="/about" className="nav-link">
-              About
+              게시판
             </Link>
           </NavItem>
           <UncontrolledDropdown inNavbar nav>
             <DropdownToggle caret nav>
-              DD Menu
+              로비
             </DropdownToggle>
             <DropdownMenu end>
-              <DropdownItem>Option 1</DropdownItem>
-              <DropdownItem>Option 2</DropdownItem>
+              <Link to="/tmp" style={{ textDecoration: "none" }}>
+                <DropdownItem>서클 멤버</DropdownItem>
+              </Link>
+              <Link to="/tmp" style={{ textDecoration: "none" }}>
+                <DropdownItem>등록 학생</DropdownItem>
+              </Link>
               <DropdownItem divider />
-              <DropdownItem>Reset</DropdownItem>
+              <Link to="/tmp" style={{ textDecoration: "none" }}>
+                <DropdownItem>외부 링크</DropdownItem>
+              </Link>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <UncontrolledDropdown inNavbar nav>
+            <DropdownToggle caret nav>
+              업무
+            </DropdownToggle>
+            <DropdownMenu end>
+              <Link to="/tmp" style={{ textDecoration: "none" }}>
+                <DropdownItem>총력전</DropdownItem>
+              </Link>
+              <DropdownItem divider />
+              <Link to="/tmp" style={{ textDecoration: "none" }}>
+                <DropdownItem>종합전술시험 </DropdownItem>
+              </Link>
+              <DropdownItem divider />
+              <Link to="/tmp" style={{ textDecoration: "none" }}>
+                <DropdownItem>전술 대회</DropdownItem>
+              </Link>
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="primary">
             <img
-              src={user1}
+              src={user}
               alt="profile"
               className="rounded-circle"
               width="30"
             ></img>
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem header>Info</DropdownItem>
-            <DropdownItem>My Account</DropdownItem>
-            <DropdownItem>Edit Profile</DropdownItem>
+            <DropdownItem header>선생이름</DropdownItem>
+            <DropdownItem header>Lv.80</DropdownItem>
+            <Link to="/tmp" style={{ textDecoration: "none" }}>
+              <DropdownItem>내 학생</DropdownItem>
+            </Link>
             <DropdownItem divider />
-            <DropdownItem>My Balance</DropdownItem>
-            <DropdownItem>Inbox</DropdownItem>
-            <DropdownItem>Logout</DropdownItem>
+            <Link to="/tmp" style={{ textDecoration: "none" }}>
+              <DropdownItem>계정 정보</DropdownItem>
+            </Link>
+            <Link to="/tmp" style={{ textDecoration: "none" }}>
+              <DropdownItem>로그아웃</DropdownItem>
+            </Link>
           </DropdownMenu>
         </Dropdown>
       </Collapse>

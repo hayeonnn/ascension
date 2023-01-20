@@ -53,8 +53,8 @@ const Starter = () => {
           <TopCards
             bg="bg-light-success text-success"
             title="Profit"
-            subtitle="Yearly Earning"
-            earning="$21k"
+            subtitle="공사중...⚒️"
+            earning="게시판"
             icon="bi bi-wallet"
           />
         </Col>
@@ -62,8 +62,8 @@ const Starter = () => {
           <TopCards
             bg="bg-light-danger text-danger"
             title="Refunds"
-            subtitle="Refund given"
-            earning="$1k"
+            subtitle="공사중...⚒️"
+            earning="로비"
             icon="bi bi-coin"
           />
         </Col>
@@ -71,8 +71,8 @@ const Starter = () => {
           <TopCards
             bg="bg-light-warning text-warning"
             title="New Project"
-            subtitle="Yearly Project"
-            earning="456"
+            subtitle="공사중...⚒️"
+            earning="업무"
             icon="bi bi-basket3"
           />
         </Col>
@@ -80,8 +80,8 @@ const Starter = () => {
           <TopCards
             bg="bg-light-info text-into"
             title="Sales"
-            subtitle="Weekly Sales"
-            earning="210"
+            subtitle="공사중...⚒️"
+            earning="내 정보"
             icon="bi bi-bag"
           />
         </Col>

@@ -11,7 +11,7 @@ import {
 
 const FeedData = [
   {
-    title: "Cras justo odio",
+    title: "공사중...⚒️",
     icon: "bi bi-bell",
     color: "primary",
     date: "6 minute ago",
