@@ -8,6 +8,10 @@
 ## tools version(window10 x64)  
 > vscode: 1.74.3  
 > node.js: 14.21.2  
+
+## node_modules.zip
+> https://drive.google.com/file/d/1aawP1o9U8xy7dQcMS_vqyAf7Q6X1x_yW/view?usp=share_link   
+> ascension폴더 하위에 넣어주세요. 
   
 ## site
 > http://ascension.cafe24app.com/
