@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const { request } = require("http");
 
 const app = express();
-const port = process.env.PORT || 8002;
+const port = process.env.PORT || 8001;
 
 // 연결할 DB 정보입력
 const connection = mysql.createConnection({
