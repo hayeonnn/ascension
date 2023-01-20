@@ -1,21 +1,36 @@
-const express = require('express')
-const app = express()
-const PORT = 8001
+const express = require("express");
+const path = require("path");
+const mysql = require("mysql");
+const { request } = require("http");
 
-// mysql 모듈 사용
-const mysql = require('mysql');
+const app = express();
+const port = process.env.PORT || 8002;
 
 // 연결할 DB 정보입력
 const connection = mysql.createConnection({
-  host: 'ascension.cafe24app.com',
-  user: 'ascension0',
-  password: 'shy66300!',
-  database: 'ascension0',
-  port: '3306',
+  host: "ascension.cafe24app.com",
+  user: "ascension0",
+  password: "shy66300!",
+  database: "ascension0",
+  port: "3306",
 });
 
 // 데이터베이스 연결
 connection.connect();
+
+app.use(express.static(path.join(__dirname, "/build")));
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/build/index.html"));
+});
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "/build/index.html"));
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
+});
 
 /**
 // create 쿼리문 사용
@@ -30,13 +45,10 @@ connection.query('describe books', (error, results, fields) => {
 });
 
 // 연결 종료
-connection.end(); */
+connection.end(); 
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs')
-app.get('/', (req, res) => {
-  res.render('index')
-})
+//앱 실행
 app.listen(PORT, () => {
-  console.log(`server started on PORT ${PORT}`)
-})
+  console.log(`server started on PORT ${PORT}`);
+});
+*/

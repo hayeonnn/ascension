@@ -53,7 +53,7 @@ web_modules/
 *.tsbuildinfo
 
 # Optional npm cache directory
-.npm
+.npm 
 
 # Optional eslint cache
 .eslintcache
@@ -77,7 +77,7 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
+#.env
 .env.development.local
 .env.test.local
 .env.production.local

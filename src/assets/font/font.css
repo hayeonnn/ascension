@@ -1,0 +1,8 @@
+/* 경기청년제목 */
+@font-face {
+  font-family: "Title_Light";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(./woff/Title_Light.woff) format("woff");
+}
