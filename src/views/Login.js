@@ -40,20 +40,16 @@ function Login() {
         >
           <form
             style={{ display: "flex", flexDirection: "column" }}
-            //onSubmit={onSubmitHandler}
+            onSubmit={onSubmitHandler}
           >
             <label>ID</label>
 
-            <input
-              type="text"
-              //value={ID}
-              //onChange={onIDHandler}
-            />
+            <input type="text" value={ID} onChange={onIDHandler} />
             <label>Password</label>
             <input
               type="password"
-              //value={Password}
-              //onChange={onPasswordHandler}
+              value={Password}
+              onChange={onPasswordHandler}
             />
             <br />
             <button formAction="">로그인</button>
