@@ -116,11 +116,11 @@ const Header = () => {
           <DropdownMenu>
             <DropdownItem header>선생이름</DropdownItem>
             <DropdownItem header>Lv.80</DropdownItem>
-            <Link to="/tmp" style={{ textDecoration: "none" }}>
+            <Link to="/join" style={{ textDecoration: "none" }}>
               <DropdownItem>내 학생</DropdownItem>
             </Link>
             <DropdownItem divider />
-            <Link to="/tmp" style={{ textDecoration: "none" }}>
+            <Link to="/login" style={{ textDecoration: "none" }}>
               <DropdownItem>계정 정보</DropdownItem>
             </Link>
             <Link to="/tmp" style={{ textDecoration: "none" }}>

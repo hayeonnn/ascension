@@ -6,10 +6,20 @@ import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
 import Loader from "./layouts/loader/Loader";
 
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "./modules/index";
+
+console.log(rootReducer);
+const store = configureStore(rootReducer);
+console.log(store.getState());
+
 ReactDOM.render(
   <Suspense fallback={<Loader />}>
     <HashRouter>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </HashRouter>
   </Suspense>,
 

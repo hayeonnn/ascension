@@ -6,6 +6,8 @@ const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 
 /***** Pages ****/
 const Tmp = lazy(() => import("../views/Tmp.js"));
+const Login = lazy(() => import("../views/Login.js"));
+const Join = lazy(() => import("../views/Join.js"));
 
 const Starter = lazy(() => import("../views/Starter.js"));
 const About = lazy(() => import("../views/About.js"));
@@ -28,6 +30,8 @@ const ThemeRoutes = [
       { path: "/", element: <Navigate to="/starter" /> },
 
       { path: "/Tmp", exact: true, element: <Tmp /> },
+      { path: "/login", exact: true, element: <Login /> },
+      { path: "/join", exact: true, element: <Join /> },
 
       { path: "/starter", exact: true, element: <Starter /> },
       { path: "/about", exact: true, element: <About /> },
