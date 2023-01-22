@@ -123,8 +123,8 @@ const Header = () => {
             <Link to="/login" style={{ textDecoration: "none" }}>
               <DropdownItem>계정 정보</DropdownItem>
             </Link>
-            <Link to="/tmp" style={{ textDecoration: "none" }}>
-              <DropdownItem>로그아웃</DropdownItem>
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <DropdownItem>로그인</DropdownItem>
             </Link>
           </DropdownMenu>
         </Dropdown>
